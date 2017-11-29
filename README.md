@@ -43,12 +43,15 @@ In addition to the standard SublimeLinter settings, SublimeLinter-cppcheck provi
 |:------|:----------|:------------:|:-------------:|
 |std|Set the language standard used.|&#10003;| |
 |enable|A comma-delimited list of checks to enable. Defaults to `style`.| |&#10003;|
+|suppress|Supress a specific warning.|| |
 
 ### Examples
 
 For ``enable``, you can use a single string (ex: ``"style,unusedFunction"``), or an array of strings if not inline (ex: ``["style", "unusedFunction"]``).
 
 For ``std``, you can use a single string for a single value, but you have to use an array of strings for multiple values (ex. ``["c89", "c99"]``), which means you can't use multiple values in inline settings.
+
+For ``suppress``, you can use a single string for a single value (ex. "redundantAssignment").
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
