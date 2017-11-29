@@ -17,7 +17,7 @@ class Cppcheck(Linter):
     """Provides an interface to cppcheck."""
 
     syntax = ('c++', 'c', 'c improved')  # Able to handle C and C++ syntax
-    cmd = ('cppcheck', '--template=gcc', '--inline-suppr', '--quiet', '*', '@')
+    cmd = ('cppcheck', '--template=gcc', '--quiet', '*', '@')
     regex = (
         r'^(?P<file>.+):(?P<line>\d+):\s+'
         r'((?P<error>error)|(?P<warning>warning|style|performance|portability|information)):\s+'
@@ -28,9 +28,11 @@ class Cppcheck(Linter):
     defaults = {
         '--std=,+': [],  # example ['c99', 'c89']
         '--enable=,': 'style',
+        '--suppress=,': '',
     }
     inline_settings = 'std'
     inline_overrides = 'enable'
+    inline_overrides = 'suppress'
 
     comment_re = r'\s*/[/*]'
 
