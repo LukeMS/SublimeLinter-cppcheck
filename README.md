@@ -51,7 +51,7 @@ For ``enable``, you can use a single string (ex: ``"style,unusedFunction"``), or
 
 For ``std``, you can use a single string for a single value, but you have to use an array of strings for multiple values (ex. ``["c89", "c99"]``), which means you can't use multiple values in inline settings.
 
-For ``suppress``, you can use a single string for a single value (ex. "redundantAssignment").
+For ``suppress``, you can use a single string for a single value (ex. "redundantAssignment"). The complete list of error codes corresponding to each message can be obtained by running `cppcheck --errorlist`.
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
